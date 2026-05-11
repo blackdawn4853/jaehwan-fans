@@ -489,7 +489,7 @@ footer{
 
 <script>
 const videos = [
-  {id:'p1',category:'popular',title:'콘텐츠 준비중',desc:'곧 공개됩니다',emoji:'🔜',locked:true},
+  {id:'p1',category:'popular',title:'너를보내고',desc:'너를보내고 Cover by 재환 '예고편'',emoji:'🎤',locked:false,video:'너를보내고.mp4'},
   {id:'p2',category:'popular',title:'콘텐츠 준비중',desc:'곧 공개됩니다',emoji:'🔜',locked:true},
   {id:'p3',category:'popular',title:'콘텐츠 준비중',desc:'곧 공개됩니다',emoji:'🔜',locked:true},
   {id:'s1',category:'singing',title:'콘텐츠 준비중',desc:'곧 공개됩니다',emoji:'🎤',locked:true},
@@ -546,6 +546,13 @@ function goPage(name,el){
 }
 
 function handleCardClick(id){
+  const v=videos.find(x=>x.id===id);if(!v)return;
+  if(v.video){
+    const url=v.video;
+    const win=window.open('','_blank');
+    win.document.write(`<video src="${url}" controls autoplay style="width:100%;height:100vh;background:#000"></video>`);
+    return;
+  }
   if(isMember()){alert('▶ 재생 중...\n(영상 파일을 연결해주세요)');return;}
   openMemberModal();
 }
