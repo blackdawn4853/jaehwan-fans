@@ -248,6 +248,7 @@ footer{padding:40px 52px;border-top:1px solid rgba(255,255,255,.06);display:flex
   <div class="section"><div class="section-title"><em>인기</em></div><div class="video-grid" id="grid-popular"></div></div>
   <div class="section"><div class="section-title"><em>노래</em></div><div class="video-grid" id="grid-singing"></div></div>
   <div class="section"><div class="section-title"><em>사진첩</em></div><div class="photo-grid" id="grid-photo"></div></div>
+  <div class="section"><div class="section-title"><em>게임</em></div><div class="video-grid" id="grid-gaming"></div></div>
   <footer><div class="footer-logo">재환팬스</div><div class="footer-text">© 2026 재환팬스 Inc.</div></footer>
 </div>
 
@@ -504,6 +505,7 @@ function timeAgo(t){
 const videos = [
   {id:'video_p1',category:'popular',title:'너를보내고',desc:'노래 예고편',src:'너를보내고.mp4'},
   {id:'video_s1',category:'singing',title:'서시',desc:'노래',src:'서시.mp4'},
+  {id:'video_g1',category:'gaming',title:'빙빙빙',desc:'게임 클립',src:'빙빙빙.mp4'},
 ];
 const photos = [
   {id:'photo_1',title:'유치원생 재환',src:'유치원생 재환.jpg'},
@@ -511,6 +513,11 @@ const photos = [
   {id:'photo_3',title:'맞네',src:'맞네.jpg'},
   {id:'photo_4',title:'우려먹어서 ㅈㅅ 하지만 제일 뽀얗다',src:'우려먹어서 ㅈㅅ 하지만 제일 뽀얗다.jpg'},
   {id:'photo_5',title:'유명한 외계인 뒤치기',src:'유명한 외계인 뒤치기.jpg'},
+  {id:'photo_7',title:'좋아해',src:'좋아해.jpg'},
+  {id:'photo_8',title:'ㅋㅋ',src:'ㅋㅋ.jpg'},
+  {id:'photo_9',title:'첫 다이아',src:'첫 다이아.jpg'},
+  {id:'photo_10',title:'ㅎㅇ',src:'ㅎㅇ.jpg'},
+  {id:'photo_11',title:'안사요찌부',src:'안사요찌부.jpg'},
 ];
 
 function renderVideos(cat,id){
